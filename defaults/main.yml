@@ -1,0 +1,8 @@
+---
+# defaults file for maxamillion.fedora_iot
+#
+ostree_upgrade: false
+ostree_remote_name: rhel-for-edge-demo
+ostree_remote_url: 192.168.122.15:8000/
+ostree_content_url: 192.168.122.15:8000/repo
+ostree_gpg_verify: "false"

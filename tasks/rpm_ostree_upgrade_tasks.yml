@@ -1,0 +1,13 @@
+- name: apply templated ostree remote config
+  template:
+    src: templates/ostree-remote.j2
+    dest: /etc/ostree/remotes.d/rhel-for-edge.conf
+
+- name: switch config to stage for rhc 
+  ansible.builtin.copy:
+    src: files/rhc-config.toml
+    dest: /etc/rhc/config.toml
+
+- name: run rpmostree update
+  rpm_ostree_upgrade:
+    allow_downgrade: yes

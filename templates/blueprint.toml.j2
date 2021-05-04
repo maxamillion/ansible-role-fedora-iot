@@ -1,0 +1,16 @@
+name = "rhel-for-edge-demo"
+description = "End to end demo"
+version = "{{ blueprint_version }}"
+modules = []
+groups = []
+
+{% for blueprint_package in blueprint_packages %}
+[[packages]]
+name = "{{blueprint_package}}"
+version = "*"
+
+{% endfor %}
+
+[customizations]
+hostname = "20210222-rhel-edge-demo-doodad"
+

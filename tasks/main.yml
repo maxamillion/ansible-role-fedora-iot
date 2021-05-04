@@ -1,0 +1,3 @@
+- name: Import tasks from rpm_ostree_upgrade_tasks.yml conditionally
+  import_tasks: rpm_ostree_upgrade_tasks.yml
+  when: ostree_upgrade
